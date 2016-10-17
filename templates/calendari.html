@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	table{
+		/*
+		border: solid 1px black;
+		*/
+	}
+	
+	tr{/*
+		border: solid 1px black;
+		background-color: silver;
+		*/
+	}
+
+	td.horitzontal{
+		border-bottom: solid 1px black;
+	}
+	li, ul{
+		list-style: none;
+
+	}
+    </style>
+
+</head>
+<body>
+<table>
+	
+		{% for i in range(1,10) %}
+			<tr>
+				{% for j in range(1,10) %}
+					{% if (i is divisibleby 3) and i != 9 %}
+						<td class= 'horitzontal' >{{i}}{{j}}</td>
+					{% else %}
+						<td>{{i}}{{j}}</td>
+					{% endif %}
+
+				{% endfor %}
+			<tr>
+	 	{% endfor %}
+	</tr>
+</table>
+</body>
+</html>
